@@ -1,5 +1,5 @@
 # Ludwig Image Recognizer
-![Ludwig Logo](images/ludwig_logo.png)
+![Ludwig Logo](https://ludwig.ai/latest/images/ludwig_logo.svg)
 
 
 
