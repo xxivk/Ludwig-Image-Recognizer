@@ -12,16 +12,10 @@ The dataset is available in the folder named `simpsons_dataset`. For our model t
 
 Before training our model, we need to convert the images inside the `simpsons_dataset` folder into a CSV file for better handling. To do this, follow these steps:
 
-# Step 1: Navigate to the Utilities\convert_image_to_CSV.py file.
-# Go to the directory where 'convert_image_to_CSV.py' is located
+1. Navigate to the `Utilities\convert_image_to_CSV.py` file.
+2. Modify the path on line 5 to your current dataset path.
+3. Set the `csv_file_path` variable to the desired output CSV file name.
 
-# Step 2: Modify the path on line 5 to your current dataset path.
-# Replace '/path/to/your/simpsons_dataset/' with the path to your current dataset folder
-python Utilities/convert_image_to_CSV.py --dataset_path /path/to/your/simpsons_dataset/
-
-# Step 3: Set the csv_file_path variable to the desired output CSV file name.
-# Replace 'path/to/your/output/simpsons_dataset.csv' with the desired name for the output CSV file
-python Utilities/convert_image_to_CSV.py --csv_file_path path/to/your/output/simpsons_dataset.csv
 
 Once these steps are completed, you will have your dataset in CSV format and ready to use for training the model!
 
