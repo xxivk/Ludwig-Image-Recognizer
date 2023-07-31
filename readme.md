@@ -46,3 +46,6 @@ This project is made by members of Antbit team ([antbit.io](https://antbit.io)).
 ---
 
 Have fun recognizing your favorite Simpsons characters with Ludwig Image Recognizer! If you have any questions or need assistance, feel free to reach out to us. Happy character recognition! 🎉
+
+
+ludwig train --dataset train.csv --config config.yaml --output_directory results
