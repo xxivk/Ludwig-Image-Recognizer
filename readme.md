@@ -1,6 +1,8 @@
+Sure, we can resize the image to make it fit better in the README.md file. Here's the updated README.md text with a resized image:
+
 # Ludwig Image Recognizer
 
-![Character Illustration](image_for_md_files/characters_illustration.png)
+<img src="image_for_md_files/characters_illustration.png" alt="Character Illustration" width="500">
 
 Ludwig Image Recognizer is a deep learning project for character recognition in images. The main goal of this project is to recognize characters from the popular TV show "The Simpsons." The model is trained on a large dataset of Simpson character images, allowing it to accurately identify various characters from the show.
 
@@ -54,10 +56,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Have fun recognizing your favorite Simpsons characters with Ludwig Image Recognizer! If you have any questions or need assistance, feel free to reach out to us. Happy character recognition! 🎉
-
-
-
-
 
 
 
