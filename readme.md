@@ -1,6 +1,6 @@
-Sure, we can resize the image to make it fit better in the README.md file. Here's the updated README.md text with a resized image:
-
 # Ludwig Image Recognizer
+![Ludwig Logo](images/ludwig_logo.png)
+
 
 <img src="image_for_md_files/characters_illustration.png" alt="Character Illustration" width="500">
 
