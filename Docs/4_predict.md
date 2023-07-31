@@ -1,27 +1,46 @@
-So far we are doing good you might noticed new folder in your working Dir contains train results and the model file called .ckpt and other files to analysis the model process .
+## Testing the Trained Model
 
-## lets test it now to see if its works !!
-1 - lets bring other image for same simpsons and i already did it for you in folder named : test_image
-Note : please not that we need to resize the images as we mentioned before 128x128 ( because our model set for this sizes) you can resize images by going to python file here Utilities\resize_test_images.py
-but i already done it for you .
-2- lets lets create Dataset for testing our images in folder test_image as you see it contains pictures we need to convert it as CSV file to predict, go to file Utilities\convert_image_to_CSV.py and modify the following:
- 1 - data_folder = "set_image_folder" add the path for test_image folder,and in line 7 set csv_file_path = "name_csv" so the test.csv file stored 
- 2 - make sure you comment label in line 15 writer.writerow(["image_name"])#, "label"])because we dont need label we want to predict the label ( check config.yaml) for further information
- 3 - in line 20 select image format as we have its jpg , run the code you will get CSV file for test.
- note : Ludwig supports various image formats as input for training and prediction. When using image data in Ludwig, the supported image formats are typically those supported by the Python Imaging Library (PIL) or its fork, Pillow. These formats include, but are not limited to:
-JPEG (.jpg, .jpeg)
-PNG (.png)
-BMP (.bmp)
-GIF (.gif)
-TIFF (.tiff, .tif)
-WebP (.webp)
-PPM (.ppm)
-PGM (.pgm)
-PBM (.pbm)
-SR (.sr)
-RAS (.ras)
-ICO (.ico)
-## lets predict now !
-ludwig predict --model_path <path_to_model_folder>  --dataset <path_to_test_csv>--output_directory <path_to_store_prediction_results>
+So far, we are making good progress! You may have noticed a new folder in your working directory that contains the training results, including the model file with the extension `.ckpt` and other files for analyzing the model's performance.
 
-after you ran this command it should gives you new folder for prediction results 
+Now, let's put our trained model to the test!
+
+1. First, we need another set of images for the Simpsons characters to evaluate the model. For your convenience, I've prepared a folder named `test_image` with some sample images. Please note that we need to resize these images to the required size (128x128) before prediction. The images have already been resized for you, but you can resize images yourself by using the Python file located at `Utilities/resize_test_images.py`.
+
+2. Next, we need to create a dataset for testing our images in the `test_image` folder. To do this, navigate to the file `Utilities/convert_image_to_CSV.py` and make the following modifications:
+
+   - Set `data_folder` to the path of the `test_image` folder.
+   - In line 7, set `csv_file_path` to the desired name for the test CSV file, e.g., `test.csv`.
+   - Comment out the label in line 15 by changing it to `writer.writerow(["image_name"])#, "label"])` because we only need to predict the label (check `config.yaml` for further information).
+   - In line 20, select the image format used in the `test_image` folder (e.g., jpg).
+
+   After making these changes, run the Python script, and it will generate the CSV file `test.csv`, which will be used for prediction.
+
+   **Note:** Ludwig supports various image formats as input for training and prediction. The supported image formats are typically those supported by the Python Imaging Library (PIL) or its fork, Pillow. These formats include, but are not limited to:
+   - JPEG (.jpg, .jpeg)
+   - PNG (.png)
+   - BMP (.bmp)
+   - GIF (.gif)
+   - TIFF (.tiff, .tif)
+   - WebP (.webp)
+   - PPM (.ppm)
+   - PGM (.pgm)
+   - PBM (.pbm)
+   - SR (.sr)
+   - RAS (.ras)
+   - ICO (.ico)
+
+## Predicting with the Model
+
+Now that we have our test dataset ready, let's use our trained model to make predictions!
+
+Run the following command in your command line or terminal:
+
+```bash
+ludwig predict --model_path <path_to_model_folder> --dataset <path_to_test_csv> --output_directory <path_to_store_prediction_results>
+```
+
+Replace `<path_to_model_folder>` with the path to the folder containing your trained model files (including the `.ckpt` file). Similarly, replace `<path_to_test_csv>` with the path to the `test.csv` file generated in the previous step. Lastly, set `<path_to_store_prediction_results>` to the desired location where you want to store the prediction results.
+
+After you run this command, Ludwig will perform predictions on the test images, and you should find a new folder with the prediction results.
+
+Congratulations! You've successfully tested your own Image Recognizer for Simpsons characters. Enjoy exploring and using your image recognition model!
