@@ -2,6 +2,7 @@
 ![Ludwig Logo](images/ludwig_logo.png)
 
 
+
 <img src="image_for_md_files/characters_illustration.png" alt="Character Illustration" width="500">
 
 Ludwig Image Recognizer is a deep learning project for character recognition in images. The main goal of this project is to recognize characters from the popular TV show "The Simpsons." The model is trained on a large dataset of Simpson character images, allowing it to accurately identify various characters from the show.
