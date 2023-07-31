@@ -1,3 +1,9 @@
+
+![Character Illustration](image_for_md_files/characters_illustration.png)
+
+
+
+
 ludwig train --dataset simpsons.csv --config config.yaml 
              --output_directory results
 
