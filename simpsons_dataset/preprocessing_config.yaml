@@ -1,0 +1,14 @@
+input_features:
+  -
+    name: image_name
+    type: image
+    encoder: resnet
+    preprocessing:
+      resize_method: interpolate
+      width: 128
+      height: 128
+
+output_features:
+  -
+    name: label
+    type: category

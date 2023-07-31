@@ -14,9 +14,6 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
     # Write the header
     writer.writerow(["image_name"])#, "label"])
 
-    # Write the header
-    writer.writerow(["image_name"])  # You can add "label" column here if needed
-
     # Loop through the dataset and write the absolute image paths
     for root, _, files in os.walk(data_folder):
         for file in files:
