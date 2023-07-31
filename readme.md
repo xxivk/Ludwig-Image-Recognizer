@@ -1,11 +1,9 @@
 # Ludwig Image Recognizer
 ![Ludwig Logo](https://ludwig.ai/latest/images/ludwig_logo.svg)
 
-
-
-<img src="image_for_md_files/characters_illustration.png" alt="Character Illustration" width="500">
-
 Ludwig Image Recognizer is a deep learning project for character recognition in images. The main goal of this project is to recognize characters from the popular TV show "The Simpsons." The model is trained on a large dataset of Simpson character images, allowing it to accurately identify various characters from the show.
+
+![Character Illustration](image_for_md_files/characters_illustration.png)
 
 ## Features
 
@@ -26,24 +24,19 @@ To use Ludwig Image Recognizer, follow these simple installation steps:
 
 ## Usage
 
-Follow these steps in Docs folder to use Ludwig Image Recognizer:
-
-Example usage:
-```
-python predict.py --model_checkpoint model/checkpoint.pth --test_images_folder test_images
-```
+Follow these steps in the [Docs](https://github.com/xxivk/Ludwig-Image-Recognizer/tree/master/Docs) folder to use Ludwig Image Recognizer.
 
 ## Dataset
 
-The dataset used for training Ludwig Image Recognizer consists of thousands of images of Simpsons characters. Each character's image is labeled with the corresponding character name. The model has been trained extensively on this dataset to achieve high accuracy in character recognition.
+The dataset used for training Ludwig Image Recognizer consists of thousands of images of Simpsons characters. The dataset was taken from Kaggle: [The Simpsons Characters Dataset](https://www.kaggle.com/datasets/alexattia/the-simpsons-characters-dataset?resource=download). Each character's image is labeled with the corresponding character name. The model has been trained extensively on this dataset to achieve high accuracy in character recognition.
 
 ## Contributing
 
 We welcome contributions to Ludwig Image Recognizer! If you have any ideas, bug fixes, or improvements, feel free to open an issue or submit a pull request.
 
-## License
+## Copywrite
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is made by members of Antbit team ([antbit.io](https://antbit.io)). 
 
 ## Acknowledgments
 
@@ -53,27 +46,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Have fun recognizing your favorite Simpsons characters with Ludwig Image Recognizer! If you have any questions or need assistance, feel free to reach out to us. Happy character recognition! 🎉
-
-
-
-
-
-
-ludwig train --dataset simpsons.csv --config config.yaml 
-             --output_directory results
-
-ludwig train --config config.yaml
-
-ludwig preprocess --config config.yaml --output_directory dataset
-
-
-ludwig preprocess --dataset image_data.csv  --preprocessing_config preprocessing_config.yaml
-ludwig preprocess --config preprocessing_config.yaml --debug
-
-ludwig preprocess --dataset simpsons_dataset --preprocessing_config simpsons_dataset\preprocessing_config.yaml 
-
-ludwig preprocess --preprocessing_config simpsons_dataset\preprocessing_config.yaml --dataset simpsons_dataset
-
-
-
-ludwig predict --model_path results\experiment_run_2\model  --dataset test.csv --output_directory results\prediction
