@@ -1,8 +1,28 @@
-First i have downloaded the dataset from Kaggle link is here https://www.kaggle.com/datasets/alexattia/the-simpsons-characters-dataset?resource=download
+# Create Dataset
 
-# note you dont have to download it its already in the project .
-the dataset is in folder named simpsons_dataset 
-as you see before when creating config.yaml file we used resize resize_method: interpolate and both of width and height is set into 128x128 so OUR MODEL WONT DEAL BUT ONLY WITH THOSE SIZES !
-## converting Images inside simpsons_dataset folder to CSV file !
-go to Utilities\convert_image_to_CSV.py line 5  and modify the path to your current dataset path and set the csv_file_path name to gives you output as CSV file.
-after this we have our dataset and ready to Train our model !!
+## Overview
+
+In this project, we are working with "The Simpsons Characters Dataset" obtained from Kaggle. You can download the dataset from the following link: [The Simpsons Characters Dataset](https://www.kaggle.com/datasets/alexattia/the-simpsons-characters-dataset?resource=download)
+
+**Note:** You don't have to download it separately, as it's already included in the project.
+
+The dataset is available in the folder named `simpsons_dataset`. For our model to work properly, we have configured the `config.yaml` file with the `resize_method: interpolate` and set the width and height to 128x128, indicating that our model will only handle images of these sizes.
+
+## Converting Images to CSV
+
+Before training our model, we need to convert the images inside the `simpsons_dataset` folder into a CSV file for better handling. To do this, follow these steps:
+
+# Step 1: Navigate to the Utilities\convert_image_to_CSV.py file.
+# Go to the directory where 'convert_image_to_CSV.py' is located
+
+# Step 2: Modify the path on line 5 to your current dataset path.
+# Replace '/path/to/your/simpsons_dataset/' with the path to your current dataset folder
+python Utilities/convert_image_to_CSV.py --dataset_path /path/to/your/simpsons_dataset/
+
+# Step 3: Set the csv_file_path variable to the desired output CSV file name.
+# Replace 'path/to/your/output/simpsons_dataset.csv' with the desired name for the output CSV file
+python Utilities/convert_image_to_CSV.py --csv_file_path path/to/your/output/simpsons_dataset.csv
+
+Once these steps are completed, you will have your dataset in CSV format and ready to use for training the model!
+
+---
