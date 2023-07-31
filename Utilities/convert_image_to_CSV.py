@@ -2,9 +2,9 @@ import os
 import csv
 
 # Replace this with the absolute path to your data folder
-data_folder = "C:\\Users\\crypto\\Desktop\\Simpsons\\test_image"
+data_folder = "simpsons_dataset"
 
-csv_file_path = "test.csv"
+csv_file_path = "train.csv"
 
 # Create or overwrite the CSV file with UTF-8 encoding
 with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
@@ -12,7 +12,7 @@ with open(csv_file_path, mode='w', newline='', encoding='utf-8') as csv_file:
 
 
     # Write the header
-    writer.writerow(["image_name"])#, "label"])
+    writer.writerow(["image_name", "label"])
 
     # Loop through the dataset and write the absolute image paths
     for root, _, files in os.walk(data_folder):
