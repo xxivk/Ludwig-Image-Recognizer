@@ -21,16 +21,12 @@ To use Ludwig Image Recognizer, follow these simple installation steps:
 1. Clone this repository to your local machine.
 2. Install the required dependencies using `pip`:
    ```
-   pip install -r requirements.txt
+   pip install ludwig
    ```
 
 ## Usage
 
-Follow these steps to use Ludwig Image Recognizer:
-
-1. Prepare your test images in a separate folder.
-2. Use the provided pre-trained model checkpoint or train your own using the training script.
-3. Run the prediction script to predict character labels for your test images.
+Follow these steps in Docs folder to use Ludwig Image Recognizer:
 
 Example usage:
 ```
